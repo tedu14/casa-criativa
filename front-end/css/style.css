@@ -1,0 +1,236 @@
+/* === GOOGLE FONTS === */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+/* === VARS === */
+
+:root {
+    --bg-color: #e5e5e5;
+    --cl-txt: #25282b;
+    --cl-btn: rgb(255, 94, 132);
+    --cl-white: #fff;
+    --cl-clear: #777;
+    --btn-shadow: rgba(255, 0, 92, .16);
+    --bx-shadow: rgba(1, 1, 1, .1);
+    --bd-ipt: rgba(255, 94, 132, .5);
+    --mg-btm: 32px;
+    --mg-rgt: 32px;
+}
+
+/* === RESET === */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: var(--cl-btn);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p, .description {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+/* === BODY === */
+
+body {
+    background-color: var(--bg-color);
+    color: var(--cl-txt);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* === #CONTAINER === */
+
+#container {
+    max-width: 980px;
+    width: 95%;
+    margin: 40px auto;
+    padding: 0 5px;
+    display: flex;
+}
+
+/* === #INTRO === */
+
+#intro {
+    width: 517px;
+    margin-right: var(--mg-rgt);
+}
+
+/* === MAIN === */
+
+main {
+    margin: var(--mg-btm) 0;
+}
+
+/* === #BUTTONS === */
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mg-btm);
+}
+
+button {
+    border: none;
+    font-weight: bold;
+    background: none;
+    color: var(--cl-btn);
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+button.fat {
+    background-color: var(--cl-btn);
+    color: var(--cl-white);
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px var(--btn-shadow);
+}
+
+button.fat:hover {
+    text-decoration: none;
+}
+
+/* === FOOTER === */
+
+footer {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: var(--cl-clear);
+}
+
+/* === .IDEA === */
+
+.idea {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: var(--cl-white);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -8px var(--bx-shadow);
+}
+
+.idea img {
+    width: 60px;
+    height: 60px;
+    margin-right: 32px;
+}
+
+.idea h3 {
+    margin: 0;
+}
+
+.idea p {
+    margin: 8px 0;
+    color: var(--cl-clear);
+}
+
+.idea .description {
+    margin: 16px 0;
+}
+
+/* === MODAL === */
+
+#modal {
+    background-color: var(--cl-btn);
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#modal.hide {
+    display: none;
+}
+
+#modal .content {
+    color: var(--cl-white);
+    margin: 50px auto;
+}
+
+#modal .content h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content form {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.content form div:nth-child(3), .content form div:nth-child(4), .content form div:nth-child(5) {
+    grid-column: span 2;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 5px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid var(--bd-ipt);
+    font-size: 16px;
+}
+
+form label {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+}
+
+form a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+form button, form a {
+    background-color: var(--cl-white);
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    transition: .1s;
+    justify-self: center;
+}
+
+form button:hover, form a:hover {
+    background-color: rgb(136, 17, 45);
+    color: var(--cl-white);
+    box-shadow: 0px 8px 16px var(--btn-shadow);
+    text-decoration: none;
+}
