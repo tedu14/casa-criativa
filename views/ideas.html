@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% set bodyId = "page-ideas" %}
+
+{% block title %}
+<title>Ideias - Casa Criativa</title>
+{% endblock %}
+
+{% block content %}
+<!--Cabeçalho-->
+<header>
+    <!--Logotipo-->
+    <a href="/">
+        <img src="./img/logo.png" alt="Logotipo casa criativa">
+    </a>
+    <nav>
+        <li><a href="/">Inicio</a></li>
+        <li><a class="button" href="#" onclick="onOff()">Nova Idéia</a></li>
+    </nav>
+</header>
+<section id="title">
+    <p>em exibição</p>
+    <h1>Idéias</h1>
+</section>
+<main>
+    <section id="ideas">
+        <!--Caixa de Idéias-->
+        {% include "all_ideias.html" %}
+    </section>
+</main>
+<!--Rodapé-->
+<footer>
+    <small>Com ❤ Thalison Eduardo</small>
+</footer>
+
+{% endblock %}

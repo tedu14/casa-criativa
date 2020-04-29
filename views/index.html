@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Casa Criativa</title>
+{% endblock %}
+
+{%block content%}
+<section id="intro">
+    <!--Cabeçalho-->
+    <header>
+        <!--Logotipo-->
+        <a href="/"><img src="./img/logo.png" alt="Logotipo casa criativa"></a>
+    </header>
+    <!--Conteúdo-->
+    <main>
+        <p>Ficar em casa em períodos longos, não deve ser nada fácil.</p>
+        <p>Por isso, iremos catalogar idéias, <strong>brincadeiras, jogos, filmes, livros, cursos,
+                dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.</p>
+        <p>Comece clicando em ver idéias para ver as idéias cadastradas e contribua adcionando a sua idéia.</p>
+    </main>
+    <!--Botões-->
+    <section id="buttons">
+        <button onclick="onOff()">+ Adicionar Idéia</button>
+        <a href="/ideias" class="button">Ver Idéias</a>
+    </section>
+    <!--Rodapé-->
+    <footer>
+        <small>Com ❤ Thalison Eduardo</small>
+    </footer>
+</section>
+<!--Últimas Idéias-->
+<section id="last-ideas">
+    <!--Caixa de Idéias-->
+    {% include "all_ideias.html" %}
+</section>
+{%endblock%}
